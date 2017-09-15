@@ -1,0 +1,98 @@
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="/phone-pay/web/lib/bootstrap3.3/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="/phone-pay/web/lib/bootstrapValidator/css/bootstrapValidator.min.css">
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="/phone-pay/web/lib/bootstrap3.3/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="/phone-pay/web/lib/bootstrapValidator/js/bootstrapValidator.min.js"></script>
+<script type="text/javascript" src="/phone-pay/web/lib/bootstrapValidator/js/language/zh_CN.js"></script>
+
+<!-- ejs模板,模块展现层,负责展现UI -->
+
+<div id="realData" class="container-fluid" align="center"> 
+    <div style="height:30px;"></div>
+    <div class="input-group input-group-lg">
+      <span class="input-group-addon" id="basic-addon3">用户名：</span>
+      <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+    </div>
+    <div style="height:30px;"></div>
+    <div style="border-bottom:solid 1px #eee; height:1px;width:90%;"></div>
+    <div style="height:30px;"></div>
+    <div class="row"> 
+      <!-- Single button -->
+      <div class="btn-group col-xs-10 col-xs-offset-1"> 
+        <button type="button" style="width:100%;color:green;" class="btn btn-default btn-lg" @click="clickRecharge">
+          {{moneytext}} <span class="caret"></span>
+          <input type="hidden" name="checkmoney" v-model="money" />
+        </button>
+        <div style="width:100%;"  v-show="showtable">
+          <ul class="nav nav-tabs">
+            <li role="presentation" class="active"><a href="#"><strong>充金币</strong></a></li>
+            <li role="presentation" class="disabled"><a href="#"><strong>充钻石</strong></a></li>
+            <li role="presentation" class="disabled"><a href="#"><strong>充贵族礼包</strong></a></li>
+          </ul> 
+          <table class="table table-striped" style="font-size:20px;">
+            <tr @click="choseMoney('100元','1000万金币')"><td>100元</td><td>1000万金币</td></tr>
+            <tr @click="choseMoney('200元','2000万金币')"><td>200元</td><td>2000万金币</td></tr>
+            <tr @click="choseMoney('300元','3000万金币')"><td>300元</td><td>3000万金币</td></tr>
+            <tr @click="choseMoney('400元','4000万金币')"><td>400元</td><td>4000万金币</td></tr>
+            <tr @click="choseMoney('500元','5000万金币')"><td>500元</td><td>5000万金币</td></tr>
+            <tr @click="choseMoney('600元','6000万金币')"><td>600元</td><td>6000万金币</td></tr>
+            <tr @click="choseMoney('1000元','1亿金币')"><td>1000元</td><td>1亿金币</td></tr>
+            <tr @click="choseMoney('2000元','2亿金币')"><td>2000元</td><td>2亿金币</td></tr>
+            <tr @click="choseMoney('3000元','3亿金币')"><td>3000元</td><td>3亿金币</td></tr>
+          </table>
+        </div> 
+      </div>
+    </div>
+
+    <div style="height:30px;"></div>
+    <div style="border-bottom:solid 1px #eee; height:1px;width:90%;"></div>
+    <div style="height:30px;"></div>
+
+    <button type="button" :class="wxcolor" @click="wxSubmit">微信充值</button>
+    <button type="button" :class="zfbcolor"  @click="zfbSubmit">支付宝充值</button>
+
+    <div style="height:30px;"></div>
+    <div style="border-bottom:solid 1px #eee; height:1px;width:90%;"></div>
+    <div style="height:30px;"></div>
+
+    <div class="alert alert-warning" role="alert" align="left">
+      <strong>注1：</strong> 请确保您填写的游戏昵称<span style="color:red;">正确无误</span>
+    </div>
+
+</div>
+
+<script>  
+    var vue = new Vue({
+      el: '#realData',
+      data: {
+        moneytext: '点我选择购买金额',
+        money: 0,
+        showtable: false,
+        wxcolor: 'btn btn-success btn-lg',
+        zfbcolor: 'btn btn-default btn-lg'
+      } ,
+      methods: {
+        clickRecharge: function () { 
+          this.showtable = this.showtable == true ? false : true;
+        },
+        wxSubmit: function(){
+          this.wxcolor = 'btn btn-success btn-lg';
+          this.zfbcolor = 'btn btn-default btn-lg'; 
+        },
+        zfbSubmit: function(){
+          this.zfbcolor = 'btn btn-success btn-lg';
+          this.wxcolor = 'btn btn-default btn-lg'; 
+        },
+        choseMoney: function(rmb,yxb){
+          this.money = rmb.replace("元","");
+          this.moneytext = rmb+"    /    "+yxb;
+          this.showtable = false;
+        }
+      }
+    });
+
+</script>

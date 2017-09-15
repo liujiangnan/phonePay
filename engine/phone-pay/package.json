@@ -1,0 +1,53 @@
+{
+  "_from": "phone-pay",
+  "_id": "phone-pay@1.0.0",
+  "_inBundle": false,
+  "_integrity": "sha512-6MccKtJyVWw5cQ+X/8q08QHOsphvgOq1X88eZ5oK48+COnHdTfZGW4pV5AJ4ZJm7HpjDewdklc+o+Q9hfjWBwQ==",
+  "_location": "/phone-pay",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "phone-pay",
+    "name": "phone-pay",
+    "escapedName": "phone-pay",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/phone-pay/-/phone-pay-1.0.0.tgz",
+  "_shasum": "3b3a2dbd7ba92e1c08acb54a5bd3596571e111ae",
+  "_spec": "phone-pay",
+  "_where": "/Users/zhy/iot/phonePay",
+  "author": {
+    "name": "liu"
+  },
+  "bugs": {
+    "url": "https://github.com/liujiangnan/phone-pay/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {},
+  "deprecated": false,
+  "description": "简单地手机支付页面与支付列表查询",
+  "homepage": "https://github.com/liujiangnan/phone-pay#readme",
+  "keywords": [
+    "支付",
+    "手机",
+    "查询"
+  ],
+  "license": "ISC",
+  "main": "index.js",
+  "name": "phone-pay",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liujiangnan/phone-pay.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.0"
+}
