@@ -1,0 +1,38 @@
+{
+  "_from": "lifekit-test",
+  "_id": "lifekit-test@1.0.4",
+  "_inBundle": false,
+  "_integrity": "sha512-BxQhtPPAPMCnwLwxPZK14Win3fF1nLLBM+kYsaXeb+EvAXqcvJERJlMrVKkqvgC5HmcnegxXFw5wrseCZYRrqg==",
+  "_location": "/lifekit-test",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "lifekit-test",
+    "name": "lifekit-test",
+    "escapedName": "lifekit-test",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/lifekit-test/-/lifekit-test-1.0.4.tgz",
+  "_shasum": "14a025a4017912ad74600806ad095060203a9a75",
+  "_spec": "lifekit-test",
+  "_where": "E:\\iotWorkSpace\\phonePay",
+  "author": "",
+  "bundleDependencies": false,
+  "dependencies": {},
+  "deprecated": false,
+  "description": "用于各个编写好的业务模块进行简单的界面预览与测试",
+  "license": "ISC",
+  "main": "index.js",
+  "name": "lifekit-test",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.4"
+}
