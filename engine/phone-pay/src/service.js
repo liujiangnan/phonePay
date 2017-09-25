@@ -3,7 +3,7 @@
 function service(net){
 
   this.list = async function(ctx,param){  
-    return ctx.render("engine/phone-pay/web/list.ejs",{});
+    return ctx.render("phone-pay/web/list.ejs",{});
   }
 
   this.search = function(data){
